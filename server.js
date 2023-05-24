@@ -70,6 +70,10 @@ if (process.env.NODE_ENV === "production") {
   })
 }
 
+app.get("/", (req, res) => {
+  res.status(200).send("Hello server is running").end()
+})
+
 app.get("/hello", (req, res) => {
   res.send("Hello World!")
 })
