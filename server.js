@@ -70,6 +70,10 @@ if (process.env.NODE_ENV === "production") {
   })
 }
 
+app.get("/hello", (req, res) => {
+  res.send("Hello World!")
+})
+
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })
