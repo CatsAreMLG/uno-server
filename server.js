@@ -51,7 +51,7 @@ io.on("connection", (socket) => {
     callback()
   })
 
-  socket.on("disconnect", () => {
+  socket.on("dis", () => {
     const user = removeUser(socket.id)
     if (user)
       io.to(user.room).emit("roomData", {
